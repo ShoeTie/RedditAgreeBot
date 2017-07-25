@@ -18,7 +18,7 @@ def run_bot(r):
 			#print ("done!")
 			print (comment.body)
 
-			time.sleep(randint(5, 30))
+			time.sleep(randint(30, 300))
 
 agree_synonyms = ["I agree.", "Can't say I disagree.", "You've got a good point there.", "Hey, you're right!", "I concur.", "The statement above is one I can get behind!", "I see where you're coming from.", "You're absolutely correct!", "I can't disagree with that!", ]
 size = len(agree_synonyms)
