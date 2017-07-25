@@ -13,14 +13,14 @@ def bot_login():
 
 def run_bot(r):
 	for comment in r.subreddit('all').stream.comments():
-		if "I feel like" in comment.body:
+		if "I feel like" in comment.body and comment.subreddit != ('SecondaryInfertility' or 'depression' or 'BipolarReddit' or'anxiety' or 'stopselfharm' or 'ADHD' or 'birthcontrol' or 'cripplingalcoholism' or 'suicidewatch' or 'ForeverAlone' or 'stopdrinking' or 'deadbedreooms' or 'SanctionedSuicide' or 'infertility' or 'seduction' or 'BreakUps' or 'nofap' or 'incels'):
 			comment.reply(agree_synonyms[randint(0,size-1)])
 			#print ("done!")
 			print (comment.body)
 
-			time.sleep(300)
+			time.sleep(randint(5, 30))
 
-agree_synonyms = ["I agree.", "Can't say I disagree.", "You've got a good point there.", "Hey, you're right!", "I concur", "The statement above is one I can get behind!", "I see where you're coming from."]
+agree_synonyms = ["I agree.", "Can't say I disagree.", "You've got a good point there.", "Hey, you're right!", "I concur.", "The statement above is one I can get behind!", "I see where you're coming from.", "You're absolutely correct!", "I can't disagree with that!", ]
 size = len(agree_synonyms)
 
 r = bot_login()
